@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link href="style.css" rel="stylesheet" />
+    <title>Chiara Lötscher</title>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <h1 onclick="app.page = 'image'">CHIARA LÖTSCHER</h1>
+        <span>
+          <button id="about-button" onclick="app.overlay = 'about'">
+            ABOUT
+          </button>
+        </span>
+        <span>
+          <button id="info-button" onclick="app.overlay = 'info'">INFO</button>
+        </span>
+        <span class="invisible" id="close-button">
+          <button onclick="app.overlay = null">(CLOSE)</button>
+        </span>
+        <span id="video-button">
+          <button class="white" onclick="app.page = 'video'">
+            VIDEO<br />↑
+          </button>
+        </span>
+      </nav>
+    </header>
+
+    <main>
+      <section id="image" onmouseleave="app.cursor = null">
+        <div>
+          <img src="photos/1.jpg" alt="Portrait 1" />
+          <div
+            onmouseenter="app.cursor = event"
+            onclick="app.image += 1"
+            id="next"
+          ></div>
+          <div
+            onmouseenter="app.cursor = event"
+            onclick="app.image -= 1"
+            id="prev"
+          ></div>
+        </div>
+      </section>
+
+      <section id="index" class="hidden"></section>
+
+      <section id="video" class="hidden">
+        <div>
+          <iframe
+            class="hidden"
+            onload="this.classList = 'appear'"
+            src="https://www.youtube.com/embed/OgB_22DzH4E?si=yB_b1WdPjkWp-nu3&rel=0&modestbranding=0"
+            title="Sternenpfad - Die Reise der Königinnen"
+            frameborder="0"
+            allow="fullscreen; encrypted-media; picture-in-picture; web-share"
+          ></iframe>
+        </div>
+      </section>
+
+      <dialog class="hidden">
+        <section id="about">
+          <div>
+            <h2>ABOUT</h2>
+            <p>
+              Chiara Lötscher is a Mediaproducerin from Bern, specialized in
+              photography, videography and design.
+            </p>
+          </div>
+          <div>
+            <h2>CONTACT</h2>
+            <p>
+              <span>T.</span>
+              <a href="tel:+41792501778">+ 79 124 24 35</a><br />
+              <span>E:</span>
+              <a href="mailto:chiarav.loetscher@bluewin.ch">
+                chiarav.loetscher@bluewin.ch
+              </a>
+              <br />
+              <span>I:</span>
+              <a href="https://www.instagram.com/cinelensia" target="_blank">
+                @cinelensia
+              </a>
+            </p>
+          </div>
+          <div>
+            <h2>CLIENTS</h2>
+            <p>
+              Tripity Lab<br />
+              Partout Partout Collectif<br />
+              Juley<br />
+              Maurice Busch<br />
+              <br />
+              WEBSITE BY:<br />
+              Chiara Lötscher
+            </p>
+          </div>
+        </section>
+
+        <section id="info">
+          <div>
+            <h2>CLIENT</h2>
+            <p id="info-client"></p>
+          </div>
+          <div>
+            <h2>PROJECT INFO</h2>
+            <p id="info-project"></p>
+          </div>
+          <div>
+            <h2>CREDITS</h2>
+            <p id="info-credits"></p>
+          </div>
+        </section>
+      </dialog>
+    </main>
+
+    <footer>
+      <nav>
+        <span>
+          <button id="index-button" onclick="app.page = 'index'">INDEX</button>
+        </span>
+      </nav>
+      <span>
+        <button onclick="app.theme = 'white'">
+          WHITE(<span id="white"></span>)
+        </button>
+      </span>
+      <span>
+        <button onclick="app.theme = 'black'">
+          BLACK(<span id="black"></span>)
+        </button>
+      </span>
+    </footer>
+
+    <script src="app.js" type="text/javascript"></script>
+  </body>
+</html>
