@@ -30,7 +30,7 @@ const app = {
     if (page === "video") {
       infoClient.innerHTML = "Partout Partout Collectif";
       infoProject.innerHTML =
-        "Video Shoot for Claus<br>Cam: Sony A7IV<br>Objectiv: Sony FE 35mm 1.4, Sone FE 24mm 1.4";
+        "Video Shoot for Claus<br>Cam: Sony A7IV<br>Objectiv: Sony FE 35mm 1.4, Sony FE 24mm 1.4";
       infoCredits.innerHTML =
         "Extra: Mia, Emma, Zoe, Lua<br>Organisation: Partout Partout Collectif";
 

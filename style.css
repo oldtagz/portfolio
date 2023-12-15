@@ -196,7 +196,7 @@ section {
   overflow: auto;
   justify-content: unset;
   padding: 2.5%;
-  gap: 2.5%;
+  gap: 5% 2.5%;
 }
 #index > div {
   width: 18%;
@@ -291,7 +291,7 @@ dialog * {
   font-family: sequelSansLightBody;
 }
 dialog > section {
-  padding: 0 5px;
+  padding: 15px 5px;
 }
 dialog > section,
 dialog > section > div {
@@ -383,8 +383,8 @@ dialog {
   #info,
   #about {
     flex-direction: column;
-    padding-top: 0;
-    justify-content: space-evenly;
+    padding-top: 15%;
+    gap: 5%;
   }
   dialog > section > div {
     width: unset;
@@ -397,11 +397,9 @@ dialog {
 /* Animations */
 .enter {
   animation: scale 0.5s ease-in-out;
-  opacity: 1;
 }
 .out {
   animation: scale 0.5s ease-in-out reverse;
-  opacity: 0;
 }
 @keyframes scale {
   from {
