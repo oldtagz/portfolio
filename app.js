@@ -1,6 +1,6 @@
 const app = {
   // constant
-  numberOfImages: 13,
+  numberOfImages: 10,
 
   // image
   get image() {
@@ -54,7 +54,7 @@ const app = {
           animate({ element, animationClass: "out" });
 
       if (page === "image") {
-        const modelDesigner = app.image > 8 ? "Skye" : "Kim";
+        const modelDesigner = app.image > 5 ? "Skye" : "Kim";
         infoClient.innerHTML = "Tripity Lab";
         infoProject.innerHTML =
           "Portrait Shoot for UFS<br>Cam: Sony A7IV<br>Objectiv: Sigma dgdn 35mm 1.4";
